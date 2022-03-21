@@ -1,6 +1,9 @@
 import { ethers } from './ethersv5.2.esm.min.js'
 import './dotenv/config'
 
+require('dotenv').config()
+console.log(process.env)
+
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
