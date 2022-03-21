@@ -22,7 +22,7 @@ const onClickConnect = async () => {
 
   const connectBtn = document.getElementsByClassName('ConnectButton')[0];
 
-  connectBtn.Listener("click", async() => {
+  connectBtn.addEventListener('click', async() => {
     connectBtn.disabled = true;
     onClickConnect();
     connectBtn.disabled = false;
@@ -31,7 +31,7 @@ const onClickConnect = async () => {
     const accounts = await ethereum.request({ method: 'eth_accounts' });
     //We take the first address in the array of addresses and display it
     connectBtn.innerText = formatWallet(accounts[0]);
-  });
+  })
 
 ethereum.on('accountsChanged', async () => {
     // Time to reload your interface with accounts[0]!

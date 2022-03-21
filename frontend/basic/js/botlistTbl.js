@@ -6,9 +6,10 @@ function removeAllChildNodes(parent) {
 
 function botlisTblDisplay() {
   // CHANGE, TEMP ONLY
-  const pinataApiKey = process?.env?.PINATA_API_KEY || '';
-  const pinataSecretApiKey = process?.env?.PINATA_SECRET_API_KEY || '';
-  
+  const pinataApiKey = 'c10bb764bb9b5827f288';
+  const pinataSecretApiKey = 'f9c32ab0a02ee5d05025146f9d8e3f17ce672fc84e9e73283daee07ad0c1ace4';
+
+  let queryString = '?'
   queryString = queryString + `status=pinned&`
   queryString = queryString + `metadata[name]=darkleaf`
 
