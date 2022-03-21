@@ -1,6 +1,6 @@
 function removeAllChildNodes(parent) {
   while (parent.children[1]) {
-    parent.removeChild(parent.children[1])
+    parent.removeChild(parent.children[1]);
   }
 }
 
