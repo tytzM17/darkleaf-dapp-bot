@@ -1,0 +1,275 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.DarkLeafHome {
+  /* width: 973px; */
+  width: 100%;
+  height: 777px;
+  background-color: rgba(35.06, 35.06, 35.06, 1);
+  position: relative;
+}
+
+.DARKLEAF {
+  position: absolute;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(164, 169, 182, 1);
+}
+
+.ConnectButton {
+  width: 223px;
+  height: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* left: 705px; */
+  right: 1%;
+  top: 16px;
+  position: absolute;
+  background-color: rgba(130, 71, 229, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.Connect-Root-Button-Cell {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ConnecttoWallet {
+  font-size: 16px;
+  line-height: 160%;
+  color: white;
+}
+
+.UploadButton {
+  width: 174px;
+  height: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* left: 490px; */
+  right: 15%;
+  top: 16px;
+  position: absolute;
+  background-color: rgba(130, 71, 229, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Upload-Root-Button-Cell {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Upload {
+  font-size: 16px;
+  line-height: 160%;
+  color: white;
+}
+
+.akaproject-dapp-bot {
+  left: 38px;
+  top: 50px;
+  position: absolute;
+  font-size: 13px;
+  line-height: 160%;
+  color: rgba(164, 169, 182, 1);
+}
+
+.tokens {
+  /* left: 400px; */
+  right: 28%;
+  top: 24px;
+  position: absolute;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(130, 71, 229, 1);
+}
+
+.BOTLIST {
+  left: 34px;
+  top: 150px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 160%;
+  color: rgba(164, 169, 182, 1);
+  cursor: pointer;
+}
+
+.MYUPLOADS {
+  left: 34px;
+  top: 204px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 160%;
+  color: rgba(164, 169, 182, 1);
+  cursor: pointer;
+}
+
+.STAKE {
+  left: 34px;
+  top: 258px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 160%;
+  color: rgba(164, 169, 182, 1);
+  cursor: not-allowed;
+}
+.GOVERNANCE {
+  left: 34px;
+  top: 312px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 160%;
+  color: rgba(164, 169, 182, 1);
+  cursor: not-allowed;
+}
+
+.Rectangle1 {
+  /* width: 705px; */
+  width: 100%;
+  height: 609px;
+  left: 250px;
+  top: 147px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-style: solid;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(137.95, 129.07, 240.12, 1);
+  color: rgba(164, 169, 182, 1);
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#metamask-link {
+  visibility: hidden;
+  color: rgba(164, 169, 182, 1);
+}
+
+.row {
+  margin: 12px;
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+}
+
+.row-desc,
+.row-code {
+  margin-bottom: 98px;
+}
+
+.uploadCol1 {
+  width: 30%;
+  height: 58px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 160%;
+  color: #a4a9b6;
+}
+
+.uploadColName input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  width: 50%;
+  height: 48px;
+  font-size: 1.5rem;
+}
+
+.uploadColDesc textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  width: 50%;
+  height: 135px;
+}
+
+.uploadColUpload {
+  float: right;
+}
+
+.SubmitButton {
+  width: 174px;
+  height: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: rgba(130, 71, 229, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.Submit-Root-Button-Cell {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Submit {
+  font-size: 16px;
+  line-height: 160%;
+  color: white;
+}
+
+h2,
+table {
+  margin: 12px;
+}
+
+#submit-spinner {
+  visibility: hidden;
+}
+
+td {
+  border-right: 2px solid rgba(130, 71, 229, 1);
+}
