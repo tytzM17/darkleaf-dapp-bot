@@ -8,7 +8,7 @@ function botlisTblDisplay() {
   // CHANGE, TEMP ONLY
   const pinataApiKey = 'e343c37d19cba01ca415';
   const pinataSecretApiKey = '372afc550d3d292c2163324e134a3a8b05f2635793e2804d1723909a4eca3c8d';
-  
+  let queryString = '?'
   queryString = queryString + `status=pinned&`
   queryString = queryString + `metadata[name]=darkleaf`
 
