@@ -2,21 +2,21 @@
 users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft, users/uploaders are then rewarded with erc20 token DLC
 
 
-# problem: 
+# problem
 so many play to earn, so little time
 
 # solution
 create bots, toools, etc for that game ;)
 
 # mvp and features
-users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft,
+- users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft,
 users/uploaders are then rewarded with erc20 token DLC (mvp)
 
-list all bots by latest, upvotes, categories, etc
+- list all bots by latest, upvotes, categories, etc
 
-can give/donate(dlc tokens or erc20) to bot creator too, to support him/her
+- can give/donate(dlc tokens or erc20) to bot creator too, to support him/her
 
-dlc token can be for donations, rewards, staked(through defi), and burn (through
+- dlc token can be for donations, rewards, staked(through defi), and burn (through
 governance feature)
 
 # contracts function
