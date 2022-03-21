@@ -40,11 +40,12 @@ function submitBot() {
 }
 
   // CHANGE, TEMP ONLY
-//   const pinataApiKey = process?.env?.PINATA_API_KEY || 'c10bb764bb9b5827f288';
-//   const pinataSecretApiKey = process?.env?.PINATA_SECRET_API_KEY || 'f9c32ab0a02ee5d05025146f9d8e3f17ce672fc84e9e73283daee07ad0c1ace4';
+//   const pinataApiKey = process?.env?.PINATA_API_KEY;
+//   const pinataSecretApiKey = process?.env?.PINATA_SECRET_API_KEY;
 
-  const pinataApiKey = 'c10bb764bb9b5827f288';
-  const pinataSecretApiKey = 'f9c32ab0a02ee5d05025146f9d8e3f17ce672fc84e9e73283daee07ad0c1ace4';
+  // CHANGE, TEMP ONLY
+  const pinataApiKey = 'e343c37d19cba01ca415';
+  const pinataSecretApiKey = '372afc550d3d292c2163324e134a3a8b05f2635793e2804d1723909a4eca3c8d';
   const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
   
   axios
