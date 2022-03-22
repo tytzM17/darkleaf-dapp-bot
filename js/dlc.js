@@ -2,7 +2,7 @@
 import { signer, userAccount, ethersjs } from "./darkleaf.js";
 
 // dlc functions
-const ERC20_CONTRACT_ADDRESS = '0xe135219f7bD38e9B0a609ae0CB1854f729F9aD9D'
+const ERC20_CONTRACT_ADDRESS = '0x5148A559cFaaEC1A915ae41e00A8Dd2Fa17ba64f'
 
 const dlcAbi = [
 	{
