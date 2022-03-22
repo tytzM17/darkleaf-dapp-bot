@@ -9,8 +9,9 @@ async function botlisTblDisplay() {
   //We take the first address in the array of addresses and display it
 
   // CHANGE, TEMP ONLY
-  const pinataApiKey = 'c10bb764bb9b5827f288';
-  const pinataSecretApiKey = 'f9c32ab0a02ee5d05025146f9d8e3f17ce672fc84e9e73283daee07ad0c1ace4';
+  const pinataApiKey = 'c10bb764bb9b5827f288'
+  const pinataSecretApiKey =
+    'f9c32ab0a02ee5d05025146f9d8e3f17ce672fc84e9e73283daee07ad0c1ace4'
 
   let queryString = '?'
   queryString = queryString + `status=pinned&`
@@ -67,11 +68,20 @@ async function botlisTblDisplay() {
               const hashNode = document.createTextNode(row.ipfs_pin_hash || '')
               tdHashNode.appendChild(hashNode)
 
+              // rewards
+              const tdRewardsNode = document.createElement('td')
+              const rewards = document.createElement('div')
+              rewards.setAttribute('id', 'rewards-div')
+              const rewardsTextNode = document.createTextNode('O DLCs')
+              rewards.appendChild(rewardsTextNode)
+              tdRewardsNode.appendChild(rewards)
+
               trnode.insertBefore(tdNameNode, trnode.children[0])
               trnode.insertBefore(tdDescNode, trnode.children[1])
               trnode.insertBefore(tdForGameNode, trnode.children[2])
               trnode.insertBefore(tdCodeNode, trnode.children[3])
               trnode.insertBefore(tdHashNode, trnode.children[4])
+              trnode.insertBefore(tdRewardsNode, trnode.children[5])
             }
 
             // then append tr to bot list tbl

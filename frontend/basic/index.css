@@ -1,6 +1,13 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   margin: 0;
+
+  font-family: 'ABeeZee', sans-serif;
+  /* font-size: 18px; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0px;
 }
 
 .DarkLeafHome {
@@ -148,8 +155,8 @@ body {
 }
 
 .Rectangle1 {
-  /* width: 705px; */
-  width: 100%;
+  width: 1650px;
+  /* width: 100%; */
   height: 609px;
   left: 250px;
   top: 147px;
@@ -272,4 +279,92 @@ table {
 
 td {
   border-right: 2px solid rgba(130, 71, 229, 1);
+}
+
+#support-btn {
+  width: 86px;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background-color: rgba(130, 71, 229, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#support-ok-modal {
+  display: none;
+  /* Auto layout */
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+  width: 511px;
+  height: 273px;
+  /* 🔹 Solid / Standard / White */
+  background: #ffffff;
+  /* 🌔 Shadow / Black Shadows / Black E3 */
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  bottom: 450px;
+  left: 30%;
+}
+
+#support-ok-modal p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  /* 🔹 Solid / Standard / Black */
+  color: #000000;
+  text-align: center;
+}
+.w3-display-topright {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+#UPLOAD {
+  position: relative;
+  left: 14%;
+  top: 15%;
+  background: rgba(0, 0, 0, 0);
+  width: 85%;
+}
+
+.w3-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.submitSupportBtn {
+  top: 120px;
+  position: relative;
+}
+
+.w3-button {
+  height: 32x;
+  width: 32px;
+  font-size: 2.5rem;
+
+  font-weight: 400;
+  line-height: 160%;
+  /* 🔹 Solid / Standard / Black */
+  color: #000000;
+  text-align: center;
 }

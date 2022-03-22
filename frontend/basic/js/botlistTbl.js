@@ -67,12 +67,22 @@ function botlisTblDisplay() {
               )
               tdAuthorNode.appendChild(authorNode)
 
+              // support button
+              const tdSupportNode = document.createElement('td')
+              const supportBtn = document.createElement("div");
+              supportBtn.setAttribute("id", "support-btn");
+              supportBtn.setAttribute("onclick", `supportOkBtn(${JSON.stringify(keyvalues)})`)
+              const supportTextNode = document.createTextNode('OK')
+              supportBtn.appendChild(supportTextNode)
+              tdSupportNode.appendChild(supportBtn)
+
               trnode.insertBefore(tdNameNode, trnode.children[0])
               trnode.insertBefore(tdDescNode, trnode.children[1])
               trnode.insertBefore(tdForGameNode, trnode.children[2])
               trnode.insertBefore(tdCodeNode, trnode.children[3])
               trnode.insertBefore(tdHashNode, trnode.children[4])
               trnode.insertBefore(tdAuthorNode, trnode.children[6])
+              trnode.insertBefore(tdSupportNode, trnode.children[7])
             }
 
             // then append tr to bot list tbl
@@ -90,4 +100,12 @@ function botlisTblDisplay() {
 const botlistTabBtn = document.getElementsByClassName('BOTLIST')[0]
 if (botlistTabBtn) {
   botlistTabBtn.addEventListener('click', botlisTblDisplay)
+}
+
+
+// support function onclick
+function supportOkBtn(params) {
+  document.getElementById('support-ok-modal').style.display='flex';
+  const data = JSON.parse(params);
+  console.log(data);
 }
