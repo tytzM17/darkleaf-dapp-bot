@@ -1,14 +1,14 @@
-# darkleaf-dapp-bot
+# Darkleaf-dapp-bot
 users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft, users/uploaders are then rewarded with erc20 token DLC
 
 
-# problem
+# Problem
 so many play to earn, so little time
 
-# solution
+# Solution
 create bots, tools, artworks, strategies, tips and tricks, etc for that game ;)
 
-# mvp and features
+# MVP and features
 - users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft,
 users/uploaders are then rewarded with erc20 token DLC (mvp)
 
@@ -27,7 +27,16 @@ governance feature)
 - solidity
 - python 
 
-# contracts function
+# DarkLeaf Contract (Mumbai)
+- DarkLeaf deployed to: 0x83e8A129903C1656Be6F868533d1Ee339cB00E25
+
+# DarkLeafCoin Contract (Mumbai)
+- DarkLeafCoin deployed to: 0x5148A559cFaaEC1A915ae41e00A8Dd2Fa17ba64f
+
+# DarkLeafNFT Contract (Mumbai)
+- DarkLeafNFT deployed to: 0xEc96Ac8dAA7B511EA79D93D6504EF724EFa8d4af
+
+# Contracts function
 - upload or create bot record , set as nft in pinata
 - support, transfer dlc tokens from user to author
 - list all bots
@@ -35,7 +44,7 @@ governance feature)
 - staking (soon), add defi elements for DLC tokens
 - governance (soon), like initial rewards, other files (artworks,strats,tips and tricks) to upload 
 
-# milestone or tasks
+# Milestone or tasks
 - UI for support and erc20 token DLC
 - Create nft contract, when user uploads and reach a certain rewards amount (e.g. 100 DLCs), an nft will be transferred to him/her
 - Deploy Darkleaf contract that tracks users as authors, and their rewards.

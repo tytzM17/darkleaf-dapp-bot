@@ -14,12 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const DarkLeafCoin = await hre.ethers.getContractFactory("DarkLeafCoin");
-  const darkLeafCoin = await DarkLeafCoin.deploy();
+  const DarkLeaf = await hre.ethers.getContractFactory("DarkLeaf");
+  const darkLeaf = await DarkLeaf.deploy('0x5148A559cFaaEC1A915ae41e00A8Dd2Fa17ba64f');
 
-  await darkLeafCoin.deployed();
+  await darkLeaf.deployed();
 
-  console.log("DarkLeafCoin deployed to:", darkLeafCoin.address);
+  console.log("DarkLeaf deployed to:", darkLeaf.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
