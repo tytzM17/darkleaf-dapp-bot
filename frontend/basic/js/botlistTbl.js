@@ -71,7 +71,8 @@ function botlisTblDisplay() {
               const tdSupportNode = document.createElement('td')
               const supportBtn = document.createElement("div");
               supportBtn.setAttribute("id", "support-btn");
-              supportBtn.setAttribute("onclick", `supportOkBtn(${JSON.stringify(keyvalues)})`)
+              supportBtn.setAttribute("data-support", JSON.stringify(keyvalues))
+              supportBtn.setAttribute("onclick", `supportOkBtn`)
               const supportTextNode = document.createTextNode('OK')
               supportBtn.appendChild(supportTextNode)
               tdSupportNode.appendChild(supportBtn)
@@ -104,8 +105,8 @@ if (botlistTabBtn) {
 
 
 // support function onclick
-function supportOkBtn(params) {
+function supportOkBtn(event) {
   document.getElementById('support-ok-modal').style.display='flex';
-  const data = JSON.parse(params);
-  console.log(data);
+  
+  console.log(event);
 }
