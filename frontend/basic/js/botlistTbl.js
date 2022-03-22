@@ -72,7 +72,7 @@ function botlisTblDisplay() {
               const supportBtn = document.createElement("div");
               supportBtn.setAttribute("id", "support-btn");
               supportBtn.setAttribute("data-support", JSON.stringify(keyvalues))
-              supportBtn.setAttribute("onclick", `supportOkBtn`)
+              supportBtn.setAttribute("onclick", `supportOkBtn(event)`)
               const supportTextNode = document.createTextNode('OK')
               supportBtn.appendChild(supportTextNode)
               tdSupportNode.appendChild(supportBtn)
@@ -106,7 +106,26 @@ if (botlistTabBtn) {
 
 // support function onclick
 function supportOkBtn(event) {
+  document.getElementById('submit-support-spinner').style.display='none';
   document.getElementById('support-ok-modal').style.display='flex';
   
-  console.log(event);
+  console.log(event.currentTarget?.dataset?.support);
+  const rowData = event.currentTarget?.dataset?.support || null
+  if (!rowData) {
+    return
+  }
+  const row = JSON.parse(rowData)
+  document.getElementById('support-name-label').innerText = row.name
+  document.getElementById('support-author-label').innerText = row.author
+
+  // support ok, dlc function
+  const supportAmount = document.getElementById('support-amount').innerText
+  approveTx(supportAmount).then(result => {
+    alert(result ? 'Approved': '')
+    // supportAuthor(_author, _authorID, _amount)
+    supportAuthor(row.author, row.authorID, supportAmount)
+  })
+  .catch(console.error)
+  // document.getElementById('submit-support-spinner').style.display='flex';
+
 }

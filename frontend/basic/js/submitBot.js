@@ -1,5 +1,7 @@
+
 // submit bot form
 function submitBot() {
+
   document.getElementsByClassName('SubmitButton')[0].style.pointerEvents = 'none'; 
   //background: #656E85; rgba(130, 71, 229, 1);
   document.getElementsByClassName('SubmitButton')[0].style.backgroundColor = '#656E85';
@@ -60,10 +62,22 @@ function submitBot() {
         console.log('submit response:', response)
         alert(`${botName} was submitted successfully, with hash ${response.data?.IpfsHash}`)
       
+        // call contract create author
+        darkLeafCreateAuthor(response.data?.IpfsHash)
+        .then(res => {
+          alert(`${res}`)
+          document.getElementsByClassName('SubmitButton')[0].style.pointerEvents = 'auto'; 
+          document.getElementsByClassName('SubmitButton')[0].style.backgroundColor = 'rgba(130, 71, 229, 1)';
+          document.getElementById('submit-spinner').style.visibility = 'hidden';
+        })
+        .catch(error => {
+          console.log(error)
+          document.getElementsByClassName('SubmitButton')[0].style.pointerEvents = 'auto'; 
+          document.getElementsByClassName('SubmitButton')[0].style.backgroundColor = 'rgba(130, 71, 229, 1)';
+          document.getElementById('submit-spinner').style.visibility = 'hidden';
+        });
       }
-      document.getElementsByClassName('SubmitButton')[0].style.pointerEvents = 'auto'; 
-      document.getElementsByClassName('SubmitButton')[0].style.backgroundColor = 'rgba(130, 71, 229, 1)';
-      document.getElementById('submit-spinner').style.visibility = 'hidden';
+     
     })
     .catch(function (error) {
       //handle error here
@@ -73,3 +87,10 @@ function submitBot() {
       document.getElementById('submit-spinner').style.visibility = 'hidden';
     })
 }
+
+
+ 
+
+
+
+

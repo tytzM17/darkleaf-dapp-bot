@@ -9,7 +9,7 @@ contract DarkLeaf {
 
     struct Author {
         uint256 rewards;
-        bytes32[] cids;
+        bytes[] cids;
         address payable account;
         bool hasInitReward;
     }
@@ -43,8 +43,8 @@ contract DarkLeaf {
     }
 
     // when user has a first upload, create user as author
-    function createAuthor(bytes32 _cid) public {
-        require(_cid != "" || _cid[0] != 0, "CID not found");
+    function createAuthor(bytes memory _cid) public {
+        require(_cid[0] != 0, "CID not found");
 
         Author storage author = authors[totalAuthors];
         author.cids.push(_cid);

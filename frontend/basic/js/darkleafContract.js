@@ -1,4 +1,9 @@
-[
+import { signer, ethersjs } from "./darkleaf.js";
+
+// dl functions
+const CONTRACT_ADDRESS = '0x9Ce7209453604a09FCe278c94667038D34B9D56A'
+
+const abi =[
 	{
 		"inputs": [
 			{
@@ -127,4 +132,63 @@
 		"stateMutability": "nonpayable",
 		"type": "function"
 	}
-]
+];
+
+
+export async function supportAuthor(_author, _authorID, _amount) {
+    if (!signer || !_author || !_authorID | !_amount) 
+    {
+        alert('Missing fields for support author')
+        return
+      }
+      const contr = new ethersjs.Contract(CONTRACT_ADDRESS, abi, signer)
+      const tx = await contr.giveToAuthor(_author, _authorID, _amount)
+      const recpt = await tx.wait()
+
+      if (!recpt) {
+        alert(`No receipt from tx: ${tx}`)  
+        return
+      }
+
+      if (recpt.status === 1) {
+        alert(`Success, Tx hash: ${recpt.transactionHash}`)
+      }
+
+      if (recpt.status === 0) {
+        alert(`Error, Tx hash: ${recpt.transactionHash}`)
+      }
+
+    }
+
+
+
+async function createAuthor(_cid) {
+    if (!signer || !_cid) {
+        alert('Missing fields for create author')
+        return
+      }
+
+      const newCid = ethersjs.utils.formatBytes32String(_cid)
+      const contr = new ethersjs.Contract(CONTRACT_ADDRESS, abi, signer)
+      const tx = await contr.createAuthor(newCid)
+      const recpt = await tx.wait()
+
+      if (!recpt) {
+        alert(`No receipt from tx: ${tx}`)  
+        return
+      }
+
+      if (recpt.status === 1) {
+        alert(`Success, Tx hash: ${recpt.transactionHash}`)
+      }
+
+      if (recpt.status === 0) {
+        alert(`Error, Tx hash: ${recpt.transactionHash}`)
+      }
+
+    }
+
+ window.darkLeafCreateAuthor = createAuthor   
+ window.darkLeafSupportAuthor = supportAuthor 
+
+

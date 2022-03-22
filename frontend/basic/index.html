@@ -33,7 +33,7 @@
       </div>
       <p class="akaproject-dapp-bot">aka project dapp bot</p>
       <a id="metamask-link" target="_blank">https://metamask.io/</a>
-      <p class="tokens">1000 DLCs</p>
+      <p class="tokens">0 DLCs</p>
 
       <div class="tab">
       <p class="BOTLIST tablinks" onclick="openTab(event, 'BOTLIST')" id="defaultOpen">BOT LIST</p>
@@ -65,6 +65,8 @@
     <div class="w3-container">
       <span onclick="document.getElementById('support-ok-modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
       <p>DLC amount to support.</p>
+      <p id="support-name-label"></p>
+      <p id="support-author-label"></p>
       <div class="column uploadColName"><input type="number" id="support-amount" name="supportAmount"></div>
       <div class="row">
         <div class="column uploadCol1"> &nbsp; </div>
@@ -153,10 +155,14 @@
     <script src="js/botlistTbl.js"></script>
     <script src="js/myuploadsTbl.js"></script>
       <script src="js/tabs.js"></script>
-      <script src="js/wallet.js"></script>
+
+
+      <script type="module" src="js/darkleafContract.js"></script>
       <script src="js/submitBot.js"></script>
       <script type="module" src="js/dlc.js"></script>
- 
-    </script>
+
+      <script src="js/wallet.js"></script>
+     
+
   </body>
 </html>
