@@ -5,10 +5,11 @@
     <title>DARKLEAF</title>
     <link rel="stylesheet" href="index.css" />
     <script src="js/axios.min.js"></script>
-<!--     https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.map -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.map"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="DarkLeafHome">
@@ -40,7 +41,7 @@
       <p class="STAKE">STAKE</p>
       <p class="GOVERNANCE">GOVERNANCE</p>
 </div>
-      <div class="Rectangle1" />
+      <div class="Rectangle1">
 
 <!-- Tab content -->
 <div id="BOTLIST" class="tabcontent">
@@ -58,11 +59,35 @@
   </tr>
 </table>
 </div>
+<!-- Support OK Modal -->
+<div id="support-ok-modal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('support-ok-modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <p>DLC amount to support.</p>
+      <div class="column uploadColName"><input type="number" id="support-amount" name="supportAmount"></div>
+      <div class="row">
+        <div class="column uploadCol1"> &nbsp; </div>
+        <div class="column uploadColUpload">
+          <div class="SubmitButton submitSupportBtn" onclick="submitSupportAmount()">
+            <div class="Submit-Root-Button-Cell">
+              <p class="Submit">Submit 
+    
+                <i id="submit-support-spinner" class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+
 
 <div id="MYUPLOADS" class="tabcontent">
   <h2>MY UPLOADS</h2>
-
+  <div style="overflow-x:auto;">
   <table id="myuploads-tbl">
     <tr>
       <th>Name</th>
@@ -74,6 +99,9 @@
     </tr>
   
   </table>
+</div>
+</div>
+
 </div>
 
 <div id="UPLOAD" class="tabcontent">
@@ -105,7 +133,7 @@
   </div>
 
   <div class="row">
-    <div class="column uploadCol1">  </div>
+    <div class="column uploadCol1"> &nbsp; </div>
     <div class="column uploadColUpload">
       <div class="SubmitButton" onclick="submitBot()">
         <div class="Submit-Root-Button-Cell">
@@ -120,14 +148,14 @@
 
 </div>
     </div>
-
+  
     <script type="module" src="js/darkleaf.js"></script>
     <script src="js/botlistTbl.js"></script>
     <script src="js/myuploadsTbl.js"></script>
       <script src="js/tabs.js"></script>
       <script src="js/wallet.js"></script>
       <script src="js/submitBot.js"></script>
-
+      <script type="module" src="js/dlc.js"></script>
  
     </script>
   </body>
