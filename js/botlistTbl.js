@@ -6,8 +6,9 @@ function removeAllChildNodes(parent) {
 
 function botlisTblDisplay() {
   // CHANGE, TEMP ONLY
-  const pinataApiKey = 'e343c37d19cba01ca415';
-  const pinataSecretApiKey = '372afc550d3d292c2163324e134a3a8b05f2635793e2804d1723909a4eca3c8d';
+  const pinataApiKey = 'c10bb764bb9b5827f288';
+  const pinataSecretApiKey = 'f9c32ab0a02ee5d05025146f9d8e3f17ce672fc84e9e73283daee07ad0c1ace4';
+
   let queryString = '?'
   queryString = queryString + `status=pinned&`
   queryString = queryString + `metadata[name]=darkleaf`
@@ -66,12 +67,22 @@ function botlisTblDisplay() {
               )
               tdAuthorNode.appendChild(authorNode)
 
+              // support button
+              const tdSupportNode = document.createElement('td')
+              const supportBtn = document.createElement("div");
+              supportBtn.setAttribute("id", "support-btn");
+              supportBtn.setAttribute("onclick", `supportOkBtn(${JSON.stringify(keyvalues)})`)
+              const supportTextNode = document.createTextNode('OK')
+              supportBtn.appendChild(supportTextNode)
+              tdSupportNode.appendChild(supportBtn)
+
               trnode.insertBefore(tdNameNode, trnode.children[0])
               trnode.insertBefore(tdDescNode, trnode.children[1])
               trnode.insertBefore(tdForGameNode, trnode.children[2])
               trnode.insertBefore(tdCodeNode, trnode.children[3])
               trnode.insertBefore(tdHashNode, trnode.children[4])
               trnode.insertBefore(tdAuthorNode, trnode.children[6])
+              trnode.insertBefore(tdSupportNode, trnode.children[7])
             }
 
             // then append tr to bot list tbl
@@ -89,4 +100,12 @@ function botlisTblDisplay() {
 const botlistTabBtn = document.getElementsByClassName('BOTLIST')[0]
 if (botlistTabBtn) {
   botlistTabBtn.addEventListener('click', botlisTblDisplay)
+}
+
+
+// support function onclick
+function supportOkBtn(params) {
+  document.getElementById('support-ok-modal').style.display='flex';
+  const data = JSON.parse(params);
+  console.log(data);
 }
