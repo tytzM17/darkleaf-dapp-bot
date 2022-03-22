@@ -1,12 +1,9 @@
 import { ethers } from './ethersv5.2.esm.min.js'
-import './dotenv/config'
-
-require('dotenv').config()
-console.log(process.env)
-
+// import "./dotenv/config";
+export const ethersjs = ethers
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+export const provider = new ethers.providers.Web3Provider(window.ethereum)
 
 const noteElement = document.getElementsByClassName('akaproject-dapp-bot')[0]
 const metamaskLink = document.getElementById('metamask-link')
@@ -27,7 +24,7 @@ await provider.send('eth_requestAccounts', [])
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
 // For this, you need the account signer...
-const signer = provider.getSigner()
+export const signer = provider.getSigner()
 
 const connectBtn = document.getElementsByClassName('ConnectButton')[0]
 
@@ -38,4 +35,8 @@ connectBtn.innerText = formatWallet(accounts[0]);
 
 const authorInput = document.getElementById('botauthor');
 authorInput.value = accounts[0];
+
+export const userAccount = accounts[0];
+
+
 
