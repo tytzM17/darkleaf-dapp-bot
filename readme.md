@@ -1,5 +1,5 @@
 # Darkleaf-dapp-bot
-users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft, users/uploaders are then rewarded with erc20 token DLC
+users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as unique ipfs record, users/uploaders are then rewarded with erc20 token DLC by supporters and erc1155 nfts aka DLN by the contract or through governance.
 
 
 # Problem
@@ -9,8 +9,8 @@ so many play to earn, so little time
 create bots, tools, artworks, strategies, tips and tricks, etc for that game ;)
 
 # MVP and features
-- users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft,
-users/uploaders are then rewarded with erc20 token DLC (mvp)
+- users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as a unique ipfs record,
+users/uploaders are then rewarded with erc20 token DLC by supporters, if uploaders gets 100 rewards, they will get an erc1155 NFT aka DLN too (mvp)
 
 - list all bots by latest, upvotes, categories, etc
 
@@ -26,6 +26,8 @@ governance feature)
 - html, css, js, react (soon)
 - solidity
 - python 
+- ERC1155, ERC20 protocols
+- moralis.io or tatum (soon)
 
 # DarkLeaf Contract (Mumbai)
 - DarkLeaf deployed to: 0x83e8A129903C1656Be6F868533d1Ee339cB00E25
