@@ -1,5 +1,5 @@
 # Darkleaf-dapp-bot
-users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as unique ipfs record, users/uploaders are then rewarded with erc20 token DLC by peers and erc1155 nfts aka DLN by the contract or through governance
+users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as unique ipfs record, users/uploaders are then rewarded with erc20 token DLC by supporters and erc1155 nfts aka DLN by the contract or through governance.
 
 
 # Problem
@@ -10,7 +10,7 @@ create bots, tools, artworks, strategies, tips and tricks, etc for that game ;)
 
 # MVP and features
 - users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as a unique ipfs record,
-users/uploaders are then rewarded with erc20 token DLC, if uploaders gets 100 rewards, they will get an erc1155 NFT aka DLN too (mvp)
+users/uploaders are then rewarded with erc20 token DLC by supporters, if uploaders gets 100 rewards, they will get an erc1155 NFT aka DLN too (mvp)
 
 - list all bots by latest, upvotes, categories, etc
 
