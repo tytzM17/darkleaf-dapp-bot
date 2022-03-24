@@ -135,7 +135,7 @@ const abi =[
 ];
 
 
-export async function supportAuthor(_author, _authorID, _amount) {
+async function supportAuthor(_author, _authorID, _amount) {
     if (!signer || !_author || !_authorID | !_amount) 
     {
         alert('Missing fields for support author')
@@ -167,10 +167,8 @@ async function createAuthor(_cid) {
         alert('Missing fields for create author')
         return
       }
-
-      const newCid = ethersjs.utils.formatBytes32String(_cid)
       const contr = new ethersjs.Contract(CONTRACT_ADDRESS, abi, signer)
-      const tx = await contr.createAuthor(newCid)
+      const tx = await contr.createAuthor(`${_cid}`)
       const recpt = await tx.wait()
 
       if (!recpt) {
