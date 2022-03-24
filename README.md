@@ -9,8 +9,8 @@ so many play to earn, so little time
 create bots, tools, artworks, strategies, tips and tricks, etc for that game ;)
 
 # MVP and features
-- users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as nft,
-users/uploaders are then rewarded with erc20 token DLC (mvp)
+- users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as a unique ipfs record,
+users/uploaders are then rewarded with erc20 token DLC, if uploaders gets 100 rewards, they will get an NFT too (mvp)
 
 - list all bots by latest, upvotes, categories, etc
 
