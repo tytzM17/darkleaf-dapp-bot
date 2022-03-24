@@ -1,5 +1,5 @@
 # Darkleaf-dapp-bot
-users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as unique ipfs record, users/uploaders are then rewarded with erc20 token DLC and erc1155 nfts aka DLN
+users can upload a bot, strategy, map, tools, etc for play-to-earn dapp ganes, and set as unique ipfs record, users/uploaders are then rewarded with erc20 token DLC by peers and erc1155 nfts aka DLN by the contract or through governance
 
 
 # Problem
