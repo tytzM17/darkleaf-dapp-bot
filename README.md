@@ -26,6 +26,8 @@ governance feature)
 - html, css, js, react (soon)
 - solidity
 - python 
+- ERC1155, ERC20 protocols
+- moralis.io or tatum (soon)
 
 # DarkLeaf Contract (Mumbai)
 - DarkLeaf deployed to: 0x83e8A129903C1656Be6F868533d1Ee339cB00E25
